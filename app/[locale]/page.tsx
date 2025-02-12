@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <div
-        className="relative min-h-screen flex flex-col items-center text-white text-center py-[37px] bg-gradient-to-r from-dark-one to-dark-two"
+        className="relative min-h-screen flex flex-col items-center text-white text-center py-10 sm:py-12 md:py-16 bg-gradient-to-r from-dark-one to-dark-two"
         style={{
           backgroundImage: `linear-gradient(to right, #333, rgb(51 51 51 / 0)), url(${logoBackground.src})`,
           backgroundSize: 'contain',
@@ -42,31 +42,34 @@ export default function Home() {
         />
 
         {/* Heading & Subheading */}
-        <div className="flex flex-col items-center justify-center gap-4 mt-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">
+        <div className="flex flex-col items-center justify-center gap-4 mt-8 md:mt-10 px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
             {locale.heading}
           </h1>
-          <p className="text-lg md:text-xl text-gray-300">{locale.paragraph}</p>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300">
+            {locale.paragraph}
+          </p>
         </div>
 
         {/* Email Input & Button */}
-        <form className="mt-6 flex items-center gap-2 bg-gray-900 rounded-full px-4 py-2">
+        <form className="mt-12 grid grid-cols-6 gap-2 md:gap-5 px-4 py-2 w-full xl:max-w-xl">
           <input
             type="email"
             placeholder="email or phone number"
-            className="bg-transparent text-white text-lg px-4 py-2 outline-none w-64 placeholder-gray-400 focus:ring-2 focus:ring-yellow-500"
+            className="bg-white text-black rounded-xl col-span-4 md:text-lg px-4 py-2 md:py-4 outline-none placeholder-gray-400 focus:ring-2 focus:ring-yellow-500 placeholder:text-xs md:placeholder:text-lg"
             aria-label="Email or phone number"
           />
           <button
             type="submit"
-            className="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500"
+            className="bg-yellow-500 text-black font-thin text-xs sm:text-base sm:font-medium col-span-2 px-2 sm:px-10 py-2 md:py-4 
+            rounded-xl hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500"
           >
-            {locale.buttonText}
+            {locale.addToWaitlist}
           </button>
         </form>
 
         {/* Social Media Icons */}
-        <div className="flex gap-4 mt-6">
+        <div className="flex gap-4 mt-6 flex-wrap justify-center">
           {[email, whatsapp, youtube, facebook].map((icon, index) => (
             <button
               key={index}
@@ -85,7 +88,10 @@ export default function Home() {
         </div>
 
         {/* Language Selector */}
-        <div className="flex items-center gap-2 mt-4 text-white">
+        <Link
+          href={locale.language}
+          className="flex items-center text-white gap-2 mt-4 "
+        >
           <Image
             src={globe}
             alt="Language"
@@ -93,13 +99,10 @@ export default function Home() {
             height={24}
             unoptimized
           />
-          <Link
-            href={locale.language}
-            className="text-lg font-medium uppercase hover:underline hover:text-primary-color"
-          >
+          <span className="text-sm sm:text-lg font-medium uppercase hover:underline hover:text-primary-color">
             {locale.language}
-          </Link>
-        </div>
+          </span>
+        </Link>
       </div>
     </>
   );

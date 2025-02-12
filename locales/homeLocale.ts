@@ -5,7 +5,6 @@ export type homeLocaleType = {
   paragraph: string;
   emailOrPhone: string;
   addToWaitlist: string;
-  buttonText: string;
   language: string;
 };
 
@@ -15,7 +14,6 @@ const homeLocale: Locale<homeLocaleType> = {
     paragraph: 'ضع بريدك الإلكتروني/رقم الهاتف حتى تكون أول من يعلم حين نطلقه!',
     emailOrPhone: 'البريد الإلكتروني أو الهاتف',
     addToWaitlist: 'انضم لقائمة الانتظار',
-    buttonText: 'تسجيل',
     language: 'en',
   },
   en: {
@@ -24,7 +22,6 @@ const homeLocale: Locale<homeLocaleType> = {
       'Register your email/phone number to be the first to know when we launch!',
     emailOrPhone: 'email or phone number',
     addToWaitlist: 'Add to waitlist',
-    buttonText: 'sign in',
     language: 'ar',
   },
 };
