@@ -61,8 +61,7 @@ export default function Home() {
           />
           <button
             type="submit"
-            className="bg-yellow-500 text-black font-thin text-xs md:text-base md:font-medium 
-            col-span-2 px-2 md:px-10 py-2 md:py-4 
+            className="bg-yellow-500 text-black font-thin text-xs md:text-base md:font-medium col-span-2 p-2 md:p-4
             rounded-xl hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-500"
           >
             {locale.addToWaitlist}

@@ -17,7 +17,7 @@ const homeLocale: Locale<homeLocaleType> = {
     language: 'en',
   },
   en: {
-    heading: 'Something great is coming soon!',
+    heading: 'Something great is coming soon! 🚀',
     paragraph:
       'Register your email/phone number to be the first to know when we launch!',
     emailOrPhone: 'email or phone number',
