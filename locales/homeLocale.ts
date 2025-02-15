@@ -6,6 +6,7 @@ export type homeLocaleType = {
   emailOrPhone: string;
   addToWaitlist: string;
   language: string;
+  thanksForSubscribing: string;
 };
 
 const homeLocale: Locale<homeLocaleType> = {
@@ -15,6 +16,7 @@ const homeLocale: Locale<homeLocaleType> = {
     emailOrPhone: 'البريد الإلكتروني أو الهاتف',
     addToWaitlist: 'انضم لقائمة الانتظار',
     language: 'en',
+    thanksForSubscribing: 'شكرا على الاشتراك!',
   },
   en: {
     heading: 'Something great is coming soon! 🚀',
@@ -23,6 +25,7 @@ const homeLocale: Locale<homeLocaleType> = {
     emailOrPhone: 'email or phone number',
     addToWaitlist: 'Add to waitlist',
     language: 'ar',
+    thanksForSubscribing: 'Thank you for subscribing!',
   },
 };
 
