@@ -23,6 +23,7 @@ export default [
     rules: {
       // Custom ESLint rules
       'JSX.IntrinsicElements':'off',
+      '@typescript-eslint/no-explicit-any':'off',
       'sonarjs/no-duplicate-string': 'warn',
       'sonarjs/no-collapsible-if': 'error',
       'no-console': 'warn', // Warn about console usage
